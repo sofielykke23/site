@@ -1,2 +1,8 @@
-<h2>Navn</h2>
-<p>Pris</p>
+---
+const { data } = Astro.props;
+---
+
+<article>
+  <h2>{data.productdisplayname}</h2>
+  <p>{data.price} kr.</p>
+</article>
