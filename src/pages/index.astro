@@ -1,11 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <header>
+    <nav>
+      <label for="burger-toggle" class="burger-menu">&#9776;</label>
+      <a href="index.html"><h1 class="logo">Fashion<span class="reverse-r">R</span>Us</h1></a>
+      <input type="checkbox" id="burger-toggle" class="burger-toggle" />
+
+      <ul class="category_list_container">
+        <li><a href="productlist.html">Accessories</a></li>
+        <li><a href="productlist.html">Apparel</a></li>
+        <li><a href="productlist.html">Footwear</a></li>
+        <li><a href="productlist.html">Free Items</a></li>
+        <li><a href="productlist.html">Personal Care</a></li>
+        <li><a href="productlist.html">Sporting Goods</a></li>
+      </ul>
+      <div class="menu-linje"></div>
+    </nav>
+  </header>
+  <main>
+    <video autoplay loop muted playsinline class="video">
+      <source src="../assets/AdobeStock_375930907_Video_HD_Preview.mov" type="video/mp4" />
+    </video>
+  </main>
+  <footer>
+    <div class="footer"><p>&#169; FashionRUs</p></div>
+  </footer>
 </Layout>
