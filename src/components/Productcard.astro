@@ -6,4 +6,10 @@ const { data } = Astro.props;
   <img src=`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp` alt="Beskrivelse af billede" />
   <h2>{data.productdisplayname}</h2>
   <p>DKK {data.price},-</p>
+  <p class={data.discount && "isOnSale saleLabel"}>
+    -
+    {data.discount}%
+  </p>
+  <a href="data.html?id={product.id}"><p class="read_more">Read more</p></a>
+  <p class={data.soldout && " sold_out"}></p>
 </article>
