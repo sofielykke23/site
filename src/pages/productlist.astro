@@ -1,0 +1,10 @@
+---
+//@ts-nocheck
+import Layout from "../layouts/Layout.astro";
+const data = await fetch("https://kea-alt-del.dk/t7/api/products").then((res) => res.json());
+---
+
+<Layout>
+  <h2>Produktliste</h2>
+  {data.map((element) => <p>{element.productdisplayname}</p>)};
+</Layout>
