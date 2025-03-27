@@ -23,7 +23,8 @@ import Productcard from "../components/Productcard.astro";
       <div class="menu-linje"></div>
     </nav>
   </header>
+
   <section class="products-grid">
-    {data.map((element) => <Productcard data={element} />)};
+    {data.map((element) => <Productcard data={element} />)}
   </section>
 </Layout>
